@@ -16,7 +16,7 @@ var swiper = new Swiper("#mainbanner", {
   }
 });
 
-var swiper2 = new Swiper("#first .inner", {
+var swiper2 = new Swiper("#one .inner", {
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
