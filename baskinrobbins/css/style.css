@@ -1,9 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;font-family: 'Noto Sans KR', sans-serif;}
 html,body{width:100%;color:#666666;min-width:1320px;}
 a{color:#666666;}
-
+h2{font-family: 'Righteous', cursive;}
 /* header */
 #header{
   width: 100%;  
@@ -55,7 +56,6 @@ a{color:#666666;}
 #mainbanner .swiper-slide{
   background-position: 50% 0;
   background-repeat: no-repeat;
-  /* background-size:cover; */
 }
 #mainbanner .br-mainbanner1{
   background-image: url(../img/br_mainbanner1.jpg);
@@ -103,40 +103,17 @@ a{color:#666666;}
   left: 0;
   width: 100%;
 }
-section .inner .box{
-  width: 50%;
-  margin: 80px 0;
-}
-section .inner .box .text-box{
-  /* padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,.1);
-  box-shadow: 10px 10px 20px 10px rgba(0,0,0,.1) */
-}
-section .text-box h3{
-  margin: 20px 0;
-  font-size: 40px;
-  color: lightpink;
-}
-
-section .text-box p{
-  margin: 30px 0
-}
 
 .common-btn{
   display:inline-block;
   width: 180px;
   height: 60px;
   line-height: 60px;
-  background: #0055b8;
   font-size: 20px;
   color: #ffffff;
-  border-radius: 5px;
-}
-
-section:nth-of-type(2n){
-  background: #f9f9f9;
+  border-radius: 30px 30px;
+  background: lightpink;
+  text-align: center;
 }
 
 section .inner{
@@ -150,6 +127,15 @@ section .inner{
   flex-direction: column;
 }
 
+section:nth-of-type(2n){
+  background: #f9f9f9;
+}
+
+section .inner .box{
+  width: 50%;
+  margin: 80px 0;
+}
+
 section .inner h2{
   font-size: 25px;
   line-height: 60px;
@@ -160,6 +146,16 @@ section .inner .subtitle{
   font-size: 24px;
   line-height: 30px;
   color:#666666; 
+}
+
+section .text-box h3{
+  margin: 20px 0;
+  font-size: 40px;
+  color: lightpink;
+}
+
+section .text-box p{
+  margin: 30px 0
 }
 
 section .inner li{
@@ -179,10 +175,38 @@ section .inner li .items h3{
   color: #252525;
 }
 
+/* 베라메뉴 공통영역 */
+section .icecream-menu{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section small{
+  color:#cc9b3b;
+}
+
+section .icecream-img{
+  position: relative;
+  width: 50%;
+}
+
+section .icecream-img::before{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 450px;
+  height: 3px;
+  background-color: lightpink;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 section .inner li .items p{
   padding:32px 0;
   line-height: 24px;
 }
+/* 베라메뉴 공통영역 */
+
 /* 공통영역 */
 
 /* section 첫번째 */
@@ -201,21 +225,6 @@ section .inner li .items p{
 /* section 첫번째 */
 
 /* section 두번째 */
-section .icecream-menu{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-section small{
-  color:#cc9b3b;
-}
-
-section .icecream-img{
-  position: relative;
-  border-bottom: 3px solid lightpink;
-  width: 50%;
-}
-
 #seconds .icecream-img .icecream-img-content, #seconds .icecream-img .icecream-img-con{
   left: 50%;
   transform: translateX(-50%);
@@ -235,13 +244,6 @@ section .icecream-img{
   margin-left: 35px;
   text-align: left;
 }
-
-#seconds .common-btn{
-  border-radius: 30px 30px;
-  background: lightpink;
-  text-align: center;
-}
-
 /* section 두번째 */
 
 /*section 세번째*/
@@ -249,7 +251,6 @@ section .icecream-img{
   margin-right: 35px;
   text-align: right;
 }
-
 /*section 세번째*/
 
 /* 푸터 */
