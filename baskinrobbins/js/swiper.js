@@ -17,6 +17,7 @@ var swiper = new Swiper("#mainbanner", {
 });
 
 var swiper2 = new Swiper("#one .inner", {
+  slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",

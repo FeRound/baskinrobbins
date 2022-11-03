@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;font-family: 'Noto Sans KR', sans-serif;}
-html,body{width:100%;color:#666666;min-width:1320px;}
+html,body{width:100%;color:#666666;}
 a{color:#666666;}
 h2{font-family: 'Righteous', cursive;}
 /* header */
@@ -129,6 +129,7 @@ h2{font-family: 'Righteous', cursive;}
   color: rgba(255,255,255,.8);
   border: 5px solid rgba(255,255,255,.8);
   border-radius: 100%;
+  box-shadow: 2px 2px 10px rgb(0 0 0);
   padding: 50px;
   box-sizing: border-box;
 }
@@ -188,7 +189,7 @@ section .inner{
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-  padding:100px 0;
+  padding:80px 0 100px;
   display: flex;
   flex-direction: column;
 }
@@ -203,7 +204,7 @@ section .inner .box{
 }
 
 section .inner h2{
-  font-size: 25px;
+  font-size: 38px;
   line-height: 60px;
   color:#2f231c;
 }
@@ -273,7 +274,6 @@ section .inner li .items p{
   line-height: 24px;
 }
 /* 베라메뉴 공통영역 */
-
 /* 공통영역 */
 
 /* section 첫번째 */
@@ -299,7 +299,7 @@ section .inner li .items p{
 }
 
 #two .icecream-img .icecream-img-content{
-  bottom:9%;
+  bottom:8%;
   transform: translateX(-50%);
 }
 
@@ -414,11 +414,9 @@ section .inner li .items p{
 }
   
   
-@media all and (max-width:1340px) {
-  #one .swiper-slide{
-    
+@media all and (max-width:1200px) {
+  #one .swiper-slide{    
     flex-wrap: wrap;
-    
   }
   #one .items{
     flex:50%;
@@ -436,21 +434,30 @@ section .inner li .items p{
     background: rgba(255, 255, 255, 1);
     transition: .5s;
   }
-  
   #header .menu ul{
     flex-direction: column;
-  }
-    
+  } 
   #header .menu ul li{
     margin: 30px 0;
     padding-left: 30px;
-  }
-    
+  } 
   #header .login-menu{
     margin-left: 0;
   }
-  
   #gnbbtn{
     display: block;
+  }
+
+  #one .items{
+    flex:100%;
+  }
+
+  #two .icecream-img-content{
+    width: 300px;
+    height: 300px;
+  }
+
+  section .text-box h3 {
+    font-size: 30px;
   }
 }
