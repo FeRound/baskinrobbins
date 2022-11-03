@@ -98,8 +98,8 @@ h2{font-family: 'Righteous', cursive;}
 }
 
 /* 공통영역 */
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
-  bottom: 100px;
+.swiper-pagination{ /*스와이퍼 불릿*/
+  bottom: 50px;
   left: 0;
   width: 100%;
 }
