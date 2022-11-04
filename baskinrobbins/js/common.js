@@ -1,4 +1,4 @@
-var swiper = new Swiper("#mainbanner", {
+var mainBannerSwiper = new Swiper("#mainbanner", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -10,13 +10,13 @@ var swiper = new Swiper("#mainbanner", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  }
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // }
 });
 
-var swiper2 = new Swiper("#one .inner", {
+var sectionOneSwiper = new Swiper("#one .inner", {
   slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
@@ -24,5 +24,10 @@ var swiper2 = new Swiper("#one .inner", {
     clickable: true,
   },
 });
+
+let familySite = document.querySelector("#familysite")
+familySite.addEventListener("click",function(){
+  familySite.classList.toggle("on");
+})
 
 

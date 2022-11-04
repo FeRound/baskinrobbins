@@ -1,14 +1,24 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+:root {
+  --basics-color: #666666;
+  --title-color: #2f231c;
+  --pink-color: #ffb6c1;
+  --small-tag-color: #cc9b3b;
+  --white-color: #ffffff;
+  --header-bg-color: #f1f1f1;
+  --footer-bg-color: #eeeeee;
+  --bg-color: #f9f9f9;
+}
 *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;font-family: 'Noto Sans KR', sans-serif;}
-html,body{width:100%;color:#666666;}
-a{color:#666666;}
+html,body{width:100%;color:#666666;font-size:10px;}
+a{color:var(--basics-color);}
 h2{font-family: 'Righteous', cursive;}
 /* header */
 #header{
   width: 100%;  
-  background: #f1f1f1;
+  background: var(--header-bg-color);
   position: fixed;
   border-bottom: 1px solid rgba(0,27,55,.1);
   z-index: 100;
@@ -29,16 +39,20 @@ h2{font-family: 'Righteous', cursive;}
   height: 70px;
 }
 
-#header .menu,#header .gnb-menu{
-  display: flex;
+#header .gnb-menu{
+  font-size: 1.5rem;
 }
 
-#header .menu{
+#header .gnb-menu a{
   
 }
 
-#header .gnb-menu li{
-  padding: 0 30px;
+#header .gnb-menu,#header .menu{
+  display: flex;
+}
+
+#header .menu li{
+  padding: 25px 30px;
 }
 
 #header .login-menu{
@@ -47,7 +61,7 @@ h2{font-family: 'Righteous', cursive;}
 }
 
 #header .login-menu li{
-  padding: 0 20px
+  padding: 25px 20px
 }
 
 /* 메인배너 */
@@ -55,12 +69,13 @@ h2{font-family: 'Righteous', cursive;}
   margin-top: 92px;
   position: relative;
   width:100%;
-  height: 697px;
+  height: 43vw;
 }
 
 #mainbanner .swiper-slide{
   background-position: 50% 0;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #mainbanner .swiper-slide > a{
@@ -70,11 +85,11 @@ h2{font-family: 'Righteous', cursive;}
 }
 
 #mainbanner .swiper-pagination{/*스와이퍼 불릿 부모*/
-  bottom: 50px;
+  bottom: 5%;
 }
 
-#mainbanner .swiper-pagination-bullet {
-  background: #ffffff; /*스와이퍼 불릿*/
+#mainbanner .swiper-pagination-bullet {/*스와이퍼 불릿*/
+  background: var(--white-color); 
   height: 15px;
   width: 15px;
   margin-left: 30px;
@@ -143,7 +158,7 @@ h2{font-family: 'Righteous', cursive;}
 input[type="checkbox"]#gnbcheck{
   display: none;
 }
-input[type="checkbox"]#gnbcheck:checked ~ #header .menu{
+input[type="checkbox"]#gnbcheck:checked ~ #header .gnb-menu{
   left:0;
 }
 #gnbbtn{
@@ -160,7 +175,7 @@ input[type="checkbox"]#gnbcheck:checked ~ #header .menu{
   display: block;
   width: 32px;
   height: 1.6px;
-  background-color: #666666;
+  background-color: var(--basics-color);
 }
 #gnbbtn span:nth-child(2){
   top:50%;
@@ -173,13 +188,13 @@ input[type="checkbox"]#gnbcheck:checked ~ #header .menu{
 
 .common-btn{
   display:inline-block;
-  width: 180px;
+  width: 18rem;
   height: 60px;
   line-height: 60px;
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 2rem;
+  color: var(--white-color);
   border-radius: 30px 30px;
-  background: lightpink;
+  background: var(--pink-color);
   text-align: center;
 }
 
@@ -195,7 +210,7 @@ section .inner{
 }
 
 section:nth-of-type(2n){
-  background: #f9f9f9;
+  background: var(--bg-color);
 }
 
 section .inner .box{
@@ -206,27 +221,27 @@ section .inner .box{
 section .inner h2{
   font-size: 38px;
   line-height: 60px;
-  color:#2f231c;
+  color:var(--title-color);
 }
 
 section .inner .subtitle{
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 30px;
-  color:#666666; 
+  color:var(--basics-color); 
 }
 
 section .text-box h3{
   margin: 20px 0;
-  font-size: 40px;
+  font-size: 4rem;
   line-height: 50px;
-  color: lightpink;
+  color: var(--pink-color);
 }
 
 section .text-box p{
   margin: 30px 0
 }
 
-section .inner li{
+/* section .inner li{
   float: left;
   text-align: center;
   width: calc(25% - 40px);
@@ -241,7 +256,7 @@ section .inner li .items{
 section .inner li .items h3{
   font-size: 20px;
   color: #252525;
-}
+} */
 
 /* 베라메뉴 공통영역 */
 section .icecream-menu{
@@ -250,7 +265,7 @@ section .icecream-menu{
 }
 
 section small{
-  color:#cc9b3b;
+  color:var(--small-tag-color);
 }
 
 section .icecream-img{
@@ -262,17 +277,17 @@ section .icecream-img::before{
   position: absolute;
   content: "";
   bottom: 0;
-  width: 450px;
+  width: 40vw;
   height: 3px;
-  background-color: lightpink;
+  background-color: var(--pink-color);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
-section .inner li .items p{
+/* section .inner li .items p{
   padding:32px 0;
   line-height: 24px;
-}
+} */
 /* 베라메뉴 공통영역 */
 /* 공통영역 */
 
@@ -288,6 +303,14 @@ section .inner li .items p{
 
 #one .items a > *{
   padding:5px 0;
+}
+
+#one .items h3{
+  font-size: 1.7rem;
+}
+
+#one .items p{
+  font-size: 1.3rem;
 }
 /* section 첫번째 */
 
@@ -329,6 +352,7 @@ section .inner li .items p{
 
 #four .sns ul li{
   width:80px;
+  height:80px;
   position: relative;
 }
 
@@ -341,23 +365,24 @@ section .inner li .items p{
 
 /* 푸터 */
 #footer {
-  background: #eeeeee;
+  background: var(--footer-bg-color);
 }
   
 #footer .inner{
   position: relative;
   max-width:1320px;
-  height:200px;
-  padding:48px 0 0 20px;
+  padding:80px 0 100px;
   box-sizing: border-box;
   margin: 0 auto;
+  display: flex;
 }
   
 #footer .inner .f-box {
   float: left;
+  font-size: 1.6rem;
 }
 
-#footer .inner .f-box:nth-of-type(2){
+#footer .inner .f-box{
   padding-left: 75px;
 }
 
@@ -365,13 +390,7 @@ section .inner li .items p{
   padding-top: 20px;
 }
 #footer .inner .f-box ul {
-  overflow: hidden;
   padding-top: 0px;
-}
-
-#footer .inner .f-box ul li{
-  float: left;
-  margin-left: 40px;
 }
 
 #footer .inner .f-box ul li:first-child{
@@ -395,9 +414,9 @@ section .inner li .items p{
   position: absolute;
   width:190px;
   height: 30px;
-  top:41px;
-  right:20px;
-  color:#333333;
+  top:10%; /*41px*/
+  right:10%; /*20px*/
+  color:var(--basics-color);
   outline: none;
   appearance: none;
   -ms-appearance: none;
@@ -407,12 +426,9 @@ section .inner li .items p{
   background-repeat: no-repeat;
   background-position: calc(100% - 15px) center;
 }
-
-#footer .inner #familysite:focus{
-  border: 1px solid #999999;
+#footer .inner #familysite.on{
   background-image: url(../img/select_box-in-reverse.png);
 }
-  
   
 @media all and (max-width:1200px) {
   #one .swiper-slide{    
@@ -420,11 +436,12 @@ section .inner li .items p{
   }
   #one .items{
     flex:50%;
+    margin-bottom: 30px;
   }
 }
   
 @media all and (max-width:767px) {
-  #header .menu{
+  #header .gnb-menu{
     flex-direction: column;
     position: fixed;
     top:92px;
@@ -434,12 +451,12 @@ section .inner li .items p{
     background: rgba(255, 255, 255, 1);
     transition: .5s;
   }
-  #header .menu ul{
+  #header .gnb-menu ul{
     flex-direction: column;
   } 
-  #header .menu ul li{
+  #header .gnb-menu ul li{
     margin: 30px 0;
-    padding-left: 30px;
+    padding: 0 30px;
   } 
   #header .login-menu{
     margin-left: 0;
@@ -448,16 +465,87 @@ section .inner li .items p{
     display: block;
   }
 
+  .swiper-button-prev,.swiper-button-next{
+    border: 3px solid rgba(255,255,255,.8);
+    padding: 30px;
+    top:55%;
+  }
+  #mainbanner .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
   #one .items{
     flex:100%;
   }
 
-  #two .icecream-img-content{
+  #two .icecream-menu{
+    flex-wrap: wrap;
+  }
+  #three .icecream-menu{
+    flex-wrap: wrap-reverse;
+  }
+
+  #two .icecream-menu .icecream-img{
+    padding-top: 500px;
+    flex: 100%;
+  }
+  #three .icecream-menu .icecream-img{
+    flex: 100%;
+  }
+
+  #two .icecream-menu .box,#three .icecream-menu .box{
+    flex: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #footer .inner{
+    flex-wrap: wrap;
+  }
+  #footer .inner > *{
+    flex: 100%;
+    text-align: center;
+  }
+  #footer .inner .f-box{
+    padding-left: 0;
+  }
+  #footer .inner .f-box ul{
+    margin: 20px 0;
+  }
+}
+
+@media all and (max-width:479px){ 
+  section .text-box h3{
+    font-size: 3rem;
+  }
+  section .inner .subtitle{
+    font-size: 1.8rem;
+  }
+  .common-btn{
+    font-size: 1.5rem;
+    width: 13.5rem;
+  }
+
+  #two .icecream-menu .icecream-img-content{
     width: 300px;
     height: 300px;
   }
 
-  section .text-box h3 {
-    font-size: 30px;
+  #three .icecream-menu img{
+    width: 300px;
+    height: 300px;
+  }
+
+  #four .sns ul{
+    flex-wrap: wrap;
+  }
+  #four .sns ul li{
+    flex: 100%;
+  }
+
+  #footer .inner .f-box{
+    font-size: 1.3rem;
   }
 }
