@@ -10,10 +10,10 @@ var mainBannerSwiper = new Swiper("#mainbanner", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // }
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  }
 });
 
 var sectionOneSwiper = new Swiper("#one .inner", {

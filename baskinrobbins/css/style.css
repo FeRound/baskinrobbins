@@ -12,7 +12,7 @@
   --bg-color: #f9f9f9;
 }
 *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;font-family: 'Noto Sans KR', sans-serif;}
-html,body{width:100%;color:#666666;font-size:10px;}
+html,body{width:100%;color:#666666;font-size:10px;scroll-behavior:smooth;}
 a{color:var(--basics-color);}
 h2{font-family: 'Righteous', cursive;}
 /* header */
@@ -391,10 +391,12 @@ section .icecream-img::before{
 }
 #footer .inner .f-box ul {
   padding-top: 0px;
+  display: flex;
+  justify-content: left;
 }
 
 #footer .inner .f-box ul li:first-child{
-  margin-left: 0;
+  margin-right: 20px;
 }
   
 #footer .inner .f-box ul li a{ /* 첫째줄 */
@@ -513,6 +515,7 @@ section .icecream-img::before{
   }
   #footer .inner .f-box ul{
     margin: 20px 0;
+    justify-content: center;
   }
 }
 
