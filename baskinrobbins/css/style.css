@@ -443,6 +443,10 @@ section .icecream-img::before{
 }
   
 @media all and (max-width:767px) {
+  #header{
+    opacity: .8;
+  }
+
   #header .gnb-menu{
     flex-direction: column;
     position: fixed;
